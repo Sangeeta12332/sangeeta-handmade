@@ -1,0 +1,141 @@
+.container {
+  min-height: 80vh;
+  background: var(--color-cream);
+}
+
+.header {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto var(--space-2xl);
+}
+
+.badge {
+  display: inline-block;
+  background: rgba(114, 47, 62, 0.08);
+  color: var(--color-burgundy);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-xs);
+}
+
+.title {
+  font-size: 2.25rem;
+  font-family: var(--font-heading);
+  color: var(--color-burgundy);
+  margin-bottom: var(--space-xs);
+}
+
+.subtitle {
+  color: var(--color-text-muted);
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: var(--space-2xl);
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .layout {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+}
+
+.infoCard, .formCard {
+  background: #FFFFFF;
+  border-radius: var(--radius-lg);
+  padding: var(--space-2xl);
+  border: 1px solid var(--color-cream-border);
+  box-shadow: var(--shadow-sm);
+}
+
+@media (max-width: 640px) {
+  .infoCard, .formCard {
+    padding: var(--space-lg);
+  }
+}
+
+.infoHeading, .formHeading {
+  font-size: 1.35rem;
+  font-family: var(--font-heading);
+  color: var(--color-burgundy);
+  margin-bottom: var(--space-xl);
+  padding-bottom: var(--space-xs);
+  border-bottom: 1px solid var(--color-cream-border);
+}
+
+.infoItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: var(--space-xl);
+}
+
+.iconWrap {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  background: var(--color-cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.infoIcon {
+  color: var(--color-burgundy);
+}
+
+.itemTitle {
+  font-size: 0.95rem;
+  color: var(--color-charcoal);
+  display: block;
+  margin-bottom: 2px;
+}
+
+.itemText {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+  margin-bottom: 4px;
+}
+
+.itemLink {
+  color: var(--color-burgundy);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  text-decoration: underline;
+}
+
+.sentBox {
+  text-align: center;
+  padding: var(--space-2xl) var(--space-md);
+}
+
+.sentCheck {
+  color: var(--color-success);
+  margin-bottom: var(--space-md);
+}
+
+.sentTitle {
+  font-size: 1.5rem;
+  font-family: var(--font-heading);
+  color: var(--color-burgundy);
+  margin-bottom: var(--space-xs);
+}
+
+.sentDesc {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: var(--space-xl);
+}

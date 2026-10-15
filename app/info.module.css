@@ -1,0 +1,102 @@
+.container {
+  min-height: 80vh;
+  background: var(--color-cream);
+  padding: 48px 16px 80px;
+}
+
+.articleCard {
+  max-width: 860px;
+  margin: 0 auto;
+  background: #FFFFFF;
+  border-radius: var(--radius-lg);
+  padding: var(--space-2xl) var(--space-2xl);
+  border: 1px solid var(--color-cream-border);
+  box-shadow: var(--shadow-sm);
+}
+
+@media (max-width: 640px) {
+  .articleCard {
+    padding: var(--space-xl) var(--space-md);
+  }
+}
+
+.header {
+  border-bottom: 1px solid var(--color-cream-border);
+  padding-bottom: var(--space-lg);
+  margin-bottom: var(--space-xl);
+}
+
+.badge {
+  display: inline-block;
+  background: rgba(114, 47, 62, 0.08);
+  color: var(--color-burgundy);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-xs);
+}
+
+.title {
+  font-size: 2.25rem;
+  font-family: var(--font-heading);
+  color: var(--color-burgundy);
+  margin-bottom: 6px;
+}
+
+.updatedDate {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+.content {
+  color: var(--color-charcoal);
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.content h2 {
+  font-size: 1.35rem;
+  font-family: var(--font-heading);
+  color: var(--color-burgundy);
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-sm);
+}
+
+.content h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-burgundy);
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-xs);
+}
+
+.content p {
+  margin-bottom: var(--space-md);
+}
+
+.content ul, .content ol {
+  padding-left: 20px;
+  margin-bottom: var(--space-md);
+}
+
+.content li {
+  margin-bottom: 6px;
+}
+
+.highlightBox {
+  background: #FFFDF9;
+  border-left: 4px solid var(--color-gold);
+  border: 1px solid var(--color-cream-border);
+  border-left-width: 4px;
+  border-left-color: var(--color-gold);
+  padding: 16px 20px;
+  border-radius: var(--radius-md);
+  margin: var(--space-lg) 0;
+}
+
+.highlightBox strong {
+  color: var(--color-burgundy);
+}

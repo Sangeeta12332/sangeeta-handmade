@@ -1,0 +1,337 @@
+.drawerBackdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(31, 27, 24, 0.55);
+  backdrop-filter: blur(4px);
+  z-index: 100;
+  display: flex;
+  justify-content: flex-end;
+  animation: fadeIn 200ms ease;
+}
+
+.drawerPanel {
+  background-color: var(--color-cream);
+  width: 100%;
+  max-width: 420px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-drawer);
+  animation: slideInRight 250ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.drawerHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) var(--space-5);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.headerTitleWrap {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.bagIcon {
+  color: var(--color-burgundy);
+}
+
+.drawerTitle {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-burgundy);
+}
+
+.itemCountBadge {
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-slate);
+}
+
+.closeBtn {
+  background: transparent;
+  border: none;
+  color: var(--color-slate);
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  transition: color var(--transition-fast);
+}
+
+.closeBtn:hover {
+  color: var(--color-burgundy);
+}
+
+/* Shipping Progress Indicator */
+.shippingBarContainer {
+  background-color: var(--color-cream-subtle);
+  padding: 10px var(--space-5);
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.75rem;
+}
+
+.shippingNotice {
+  color: var(--color-charcoal);
+}
+
+.shippingQualified {
+  color: var(--color-success);
+  font-weight: 600;
+}
+
+.progressBarTrack {
+  height: 4px;
+  background-color: var(--color-border);
+  border-radius: var(--radius-pill);
+  margin-top: 6px;
+  overflow: hidden;
+}
+
+.progressBarFill {
+  height: 100%;
+  background-color: var(--color-gold);
+  border-radius: var(--radius-pill);
+  transition: width 300ms ease;
+}
+
+/* Items List */
+.itemsList {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-4) var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.emptyState {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--space-6) 0;
+}
+
+.emptyIconWrap {
+  width: 80px;
+  height: 80px;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-cream-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-gold);
+  margin-bottom: var(--space-3);
+}
+
+.emptyTitle {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  color: var(--color-burgundy);
+  margin-bottom: 4px;
+}
+
+.emptyDesc {
+  font-size: 0.875rem;
+  color: var(--color-slate);
+  max-width: 260px;
+}
+
+.cartItem {
+  display: flex;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  background-color: var(--color-cream-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  position: relative;
+}
+
+.itemImageWrapper {
+  width: 74px;
+  height: 74px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 1px solid var(--color-border);
+  background-color: #FFFFFF;
+}
+
+.itemImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.imagePlaceholder {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-cream-subtle);
+}
+
+.itemDetails {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.itemTitle {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-charcoal);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 2px;
+}
+
+.itemPrice {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--color-burgundy);
+  margin-bottom: var(--space-2);
+}
+
+.itemActions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+.stepper {
+  display: inline-flex;
+  align-items: center;
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.stepBtn {
+  background: transparent;
+  border: none;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-charcoal);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.stepBtn:hover:not(:disabled) {
+  background-color: var(--color-cream-subtle);
+  color: var(--color-burgundy);
+}
+
+.stepBtn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.stepValue {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  padding: 0 8px;
+  min-width: 24px;
+  text-align: center;
+}
+
+.removeBtn {
+  background: transparent;
+  border: none;
+  color: var(--color-slate);
+  cursor: pointer;
+  padding: 6px;
+  transition: color var(--transition-fast);
+}
+
+.removeBtn:hover {
+  color: var(--color-error);
+}
+
+.stockNotice {
+  font-size: 0.6875rem;
+  color: var(--color-warning);
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+/* Drawer Footer */
+.drawerFooter {
+  padding: var(--space-4) var(--space-5);
+  background-color: var(--color-cream-card);
+  border-top: 1px solid var(--color-border);
+}
+
+.calcRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.875rem;
+  color: var(--color-slate);
+  margin-bottom: 8px;
+}
+
+.amount {
+  font-weight: 600;
+  color: var(--color-charcoal);
+}
+
+.freeBadge {
+  color: var(--color-success);
+  font-weight: 700;
+  background-color: var(--color-success-bg);
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+}
+
+.divider {
+  height: 1px;
+  background-color: var(--color-border);
+  margin: var(--space-3) 0;
+}
+
+.totalRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-burgundy);
+}
+
+.grandTotal {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-burgundy);
+}
+
+.guaranteeText {
+  font-size: 0.6875rem;
+  color: var(--color-slate);
+  text-align: center;
+  margin-top: 10px;
+}

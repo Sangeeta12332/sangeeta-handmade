@@ -1,0 +1,125 @@
+.container {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-cream);
+  padding: 32px 16px;
+}
+
+.loginCard {
+  max-width: 440px;
+  width: 100%;
+  background: #FFFFFF;
+  border-radius: var(--radius-lg);
+  padding: var(--space-2xl);
+  border: 1px solid var(--color-cream-border);
+  box-shadow: var(--shadow-lg);
+}
+
+.topBack {
+  margin-bottom: var(--space-md);
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-text-muted);
+  font-size: 0.8125rem;
+  transition: color var(--transition-fast);
+}
+
+.backLink:hover {
+  color: var(--color-burgundy);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.logoBadge {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(114, 47, 62, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-md);
+}
+
+.logoIcon {
+  color: var(--color-burgundy);
+}
+
+.title {
+  font-size: 1.5rem;
+  font-family: var(--font-heading);
+  color: var(--color-burgundy);
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+.errorBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #FEE2E2;
+  color: #DC2626;
+  border: 1px solid #FCA5A5;
+  border-radius: var(--radius-md);
+  padding: 10px 14px;
+  margin-bottom: var(--space-lg);
+  font-size: 0.875rem;
+}
+
+.form {
+  margin-bottom: var(--space-xl);
+}
+
+.inputWrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.fieldIcon {
+  position: absolute;
+  left: 12px;
+  color: var(--color-text-muted);
+  pointer-events: none;
+}
+
+.inputWithIcon {
+  padding-left: 38px !important;
+}
+
+.demoNotice {
+  background: #FFFDF9;
+  border: 1px dashed var(--color-gold);
+  border-radius: var(--radius-md);
+  padding: 12px 16px;
+  font-size: 0.8125rem;
+  color: var(--color-charcoal);
+  line-height: 1.5;
+}
+
+.demoNotice strong {
+  display: block;
+  color: var(--color-burgundy);
+  margin-bottom: 4px;
+}
+
+.demoNotice code {
+  background: rgba(114, 47, 62, 0.06);
+  padding: 1px 6px;
+  border-radius: 4px;
+  color: var(--color-burgundy);
+  font-weight: 600;
+}

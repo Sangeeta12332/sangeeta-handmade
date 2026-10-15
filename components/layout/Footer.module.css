@@ -1,0 +1,262 @@
+.footer {
+  margin-top: auto;
+  border-top: 1px solid var(--color-border);
+}
+
+.trustStrip {
+  background-color: var(--color-cream-card);
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-6) 0;
+}
+
+.trustGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+@media (min-width: 640px) {
+  .trustGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .trustGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.trustItem {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.trustIconWrap {
+  width: 44px;
+  height: 44px;
+  background-color: var(--color-cream);
+  border: 1px solid var(--color-gold);
+  border-radius: var(--radius-pill);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-burgundy);
+  flex-shrink: 0;
+}
+
+.trustTitle {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--color-burgundy);
+  margin-bottom: 2px;
+}
+
+.trustDesc {
+  font-size: 0.8125rem;
+  color: var(--color-slate);
+  line-height: 1.4;
+}
+
+.mainFooter {
+  background-color: var(--color-burgundy);
+  color: var(--color-cream);
+  padding: var(--space-8) 0 var(--space-5) 0;
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+  margin-bottom: var(--space-7);
+}
+
+@media (min-width: 640px) {
+  .footerGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .footerGrid {
+    grid-template-columns: 1.5fr 1fr 1fr 1.3fr;
+  }
+}
+
+.footerColBrand {
+  display: flex;
+  flex-direction: column;
+}
+
+.footerLogo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--space-3);
+}
+
+.brandMain {
+  font-family: var(--font-serif);
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: var(--color-cream);
+  line-height: 1;
+}
+
+.brandSub {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--color-gold);
+  margin-top: 2px;
+}
+
+.footerBrandDesc {
+  font-size: 0.875rem;
+  color: rgba(255, 248, 239, 0.82);
+  line-height: 1.6;
+  margin-bottom: var(--space-4);
+  max-width: 320px;
+}
+
+.socialRow {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.socialLink {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-pill);
+  background-color: rgba(255, 248, 239, 0.1);
+  border: 1px solid rgba(198, 161, 91, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-cream);
+  transition: all var(--transition-fast);
+}
+
+.socialLink:hover {
+  background-color: var(--color-gold);
+  color: var(--color-burgundy);
+  transform: translateY(-2px);
+}
+
+.colTitle {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-gold);
+  margin-bottom: var(--space-4);
+  letter-spacing: 0.02em;
+}
+
+.colList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.colList a {
+  font-size: 0.875rem;
+  color: rgba(255, 248, 239, 0.85);
+  transition: color var(--transition-fast), padding-left var(--transition-fast);
+}
+
+.colList a:hover {
+  color: var(--color-cream);
+  padding-left: 4px;
+}
+
+.contactItems {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: var(--space-4);
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.875rem;
+  color: rgba(255, 248, 239, 0.88);
+}
+
+.contactIcon {
+  color: var(--color-gold);
+  flex-shrink: 0;
+}
+
+.waPromptBox {
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(198, 161, 91, 0.35);
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+}
+
+.waPromptText {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--color-cream);
+  margin-bottom: 6px;
+}
+
+.waPromptLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #25D366;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  transition: color var(--transition-fast);
+}
+
+.waPromptLink:hover {
+  color: #55EE8B;
+  text-decoration: underline;
+}
+
+.bottomBar {
+  border-top: 1px solid rgba(255, 248, 239, 0.15);
+  padding-top: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  align-items: center;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .bottomBar {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+
+.copyrightText {
+  font-size: 0.8125rem;
+  color: rgba(255, 248, 239, 0.65);
+}
+
+.paymentMethods {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
+}
+
+.payBadge {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  background-color: rgba(255, 248, 239, 0.1);
+  border: 1px solid rgba(255, 248, 239, 0.2);
+  color: rgba(255, 248, 239, 0.9);
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  letter-spacing: 0.02em;
+}
