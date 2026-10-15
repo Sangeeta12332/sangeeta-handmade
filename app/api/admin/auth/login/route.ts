@@ -36,9 +36,8 @@ export async function POST(req: NextRequest) {
     }
 
     // Default bootstrap credentials for initial setup & local demonstration
-    // (Documented in TRD.md and .env.example)
-    const bootstrapEmail = (process.env.ADMIN_BOOTSTRAP_EMAIL || 'admin@sangitahandmade.com').toLowerCase();
-    const bootstrapPassword = process.env.ADMIN_BOOTSTRAP_PASSWORD || 'SangitaAdmin2026!';
+    const bootstrapEmail = (process.env.ADMIN_BOOTSTRAP_EMAIL || process.env.ADMIN_DEFAULT_USERNAME || 'admin@sangitahandmade.com').toLowerCase();
+    const bootstrapPassword = process.env.ADMIN_BOOTSTRAP_PASSWORD || process.env.ADMIN_DEFAULT_PASSWORD || 'SangitaAdmin2026!';
 
     if (!adminPayload && cleanEmail === bootstrapEmail && password === bootstrapPassword) {
       adminPayload = {

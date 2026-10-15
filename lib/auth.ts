@@ -2,7 +2,7 @@ import bcrypt from 'bcryptjs';
 import { SignJWT, jwtVerify } from 'jose';
 import { cookies } from 'next/headers';
 
-const JWT_SECRET = process.env.JWT_SECRET || 'sangita-handmade-secure-artisan-jwt-secret-key-32chars';
+const JWT_SECRET = process.env.JWT_SECRET || process.env.ADMIN_JWT_SECRET || 'sangita-handmade-secure-artisan-jwt-secret-key-32chars';
 const secretKey = new TextEncoder().encode(JWT_SECRET);
 
 export interface AdminTokenPayload {
